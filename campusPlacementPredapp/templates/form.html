@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="grid2">
+    <h1 class="he1">Fill The Form!!</h1>
+    <form Id="form" action="/predict" method="post" class="form">
+        <div class="contq">
+            <div class="q">Gender:</div>
+            <div class="opt">
+                <div>
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="female" value="0.0">
+                </div>
+                <div>
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="male" value="1.0">
+                </div>
+            </div>
+        </div>
+        <div class="contq">
+            <div class="q">Board Of Education:</div>
+            <div class="opt">
+                <div>
+                    <label for="scentral">Central</label>
+                    <input type="radio" name="ssc_b" id="scentral" value="1.0">
+                </div>
+                <div>
+                    <label for="sother">Other</label>
+                    <input type="radio" name="ssc_b" id="sother" value="0.0">
+                </div>
+            </div>
+        </div>
+        <div class="contq">
+            <div class="q">Board Of Higher Education:</div>
+            <div class="opt">
+                <div>
+                    <label for="hcentral">Central</label>
+                    <input type="radio" name="hsc_b" id="hcentral" value="1.0">
+                </div>
+                <div>
+                <label for="hother">Other</label>
+                <input type="radio" name="hsc_b" id="hother" value="0.0">
+                </div>
+            </div>
+        </div>
+        <div class="contq">
+            <div class="q">Specialization:</div>
+            <div class="opt">
+                <div>
+                    <label for="arts">Arts</label>
+                    <input type="radio" name="hsc_s" id="arts" value="2.0">
+                </div>
+                <div>
+                    <label for="commerce">Commerce</label>
+                    <input type="radio" name="hsc_s" id="commerce" value="0.0">
+                </div>
+                <div>
+                    <label for="science">Science</label>
+                    <input type="radio" name="hsc_s" id="science" value="1.0">
+                </div>
+            </div>
+        </div>
+        <div class="contq">
+            <div class="q">Degree:</div>
+            <div class="opt">
+                <div>
+                    <label for="CommerceAndManagement">Commerce And Management</label>
+                    <input type="radio" name="degree_t" id="cm" value="0.0">
+                </div>
+                <div>
+                    <label for="Other">Other</label>
+                    <input type="radio" name="degree_t" id="Ot" value="2.0">
+                </div>
+                <div>
+                    <label for="scienceandtech">Science And Technology</label>
+                    <input type="radio" name="degree_t" id="st" value="1.0">
+                </div>
+            </div>
+        </div>
+        <div class="contq">
+            <div class="q">Experience:</div>
+            <div class="opt">
+                <div>
+                    <label for="expN">No</label>
+                    <input type="radio" name="workex" id="expN" value="0.0">
+                </div>
+                <div>
+                    <label for="expY">Yes</label>
+                    <input type="radio" name="workex" id="expY" value="1.0">
+                </div>
+            </div>
+        </div>
+        <div class="contq">
+            <label class="q" for="sp">School Percentage:</label>
+            <input type="text" class="inp" id="ssc_p" name="ssc_p"  required>
+        </div>
+        <div class="contq">
+            <label class="q" for="sp">High School Percentage:</label>
+            <input type="text" class="inp" id="hsc_p" name="hsc_p"  required>
+        </div>
+        <div class="contq">
+            <label class="q" for="sp">Degree Percentage:</label>
+            <input type="text" class="inp" id="degree_p" name="degree_p"  required>
+        </div>
+
+        <button id="predict">Predict</button>
+    </form>
+
+</div>
+{% endblock %}
